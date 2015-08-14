@@ -7,7 +7,6 @@ public class circulo extends javax.swing.JFrame {
     int y;
     public circulo() {
         initComponents();
-         setSize (300, 300);
          circulo.setLocation(70, 70);
          Thread t1=new Thread(new Runnable(){
              @Override
@@ -18,13 +17,16 @@ public class circulo extends javax.swing.JFrame {
       while(true) {
         try{
            Thread.sleep(250);
+          
            if((x==200)&&(y==200)){
                  x=70;
                  y=70;
             }          
            else{
-               x=x+10;
-               y=y+10;         }
+               x=x+5;
+               y=y+5;
+               
+           }
            circulo.setLocation(x, y);
             }catch(Exception e){        
      }          
